@@ -16,7 +16,7 @@ public class Gambling {
 		while (day < max_days) {
 			while (everyday_stack > 50 && everyday_stack < 150) {
 
-				int check = (int) (Math.random() * 10) % 2;
+				int check = (int) (Math.random() * 10) % 2; // taking random to check the bet won or lost
 
 				if (check == 0) {
 					everyday_stack++;
@@ -27,7 +27,7 @@ public class Gambling {
 					days_lost--;
 
 				}
-				if (everyday_stack > 100) {
+				if (everyday_stack > 100) { // checking condition for bet won or lost
 					System.out.println("bet won");
 					profit = everyday_stack - 100;
 					if (profit == 50) {
@@ -41,7 +41,7 @@ public class Gambling {
 				}
 
 			}
-			day++;
+			day++; // incrementing days
 			System.out.println("Total profit in day  " + day + " is " + everyday_stack);
 		}
 
